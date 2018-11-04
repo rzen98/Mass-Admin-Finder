@@ -71,8 +71,8 @@ try:
                     f.close()
                     print("%s %s %s" % (host, "===> Not found:", response.status))
                 elif response.status == 302:
-                    f = open("found 302 Redirection", 'a')
-                    f.write("302===>")
+                    f = open("result.txt", 'a')
+                    f.write("found 302 Redirection")
                     f.write(host)
                     f.write("\n")
                     f.write("\n")
