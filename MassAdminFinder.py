@@ -57,14 +57,14 @@ try:
                     adm1 = adm1 + 1
                     print("%s %s" % ( "http://" + host, '===> Admin found'))
                     f = open("result.txt", 'a')
-                    f.write("found 200 OK")
+                    f.write("found 200 OK : ")
                     f.write(host)
                     f.write("\n")
                     f.write("\n")
                     f.close()
                 elif response.status == 404:
                     f = open("bad.txt", 'a')
-                    f.write("404") 
+                    f.write("404 : ") 
                     f.write(host)
                     f.write("\n")
                     f.write("\n")
@@ -72,7 +72,7 @@ try:
                     print("%s %s %s" % (host, "===> Not found:", response.status))
                 elif response.status == 302:
                     f = open("result.txt", 'a')
-                    f.write("found 302 Redirection")
+                    f.write("found 302 Redirection : ")
                     f.write(host)
                     f.write("\n")
                     f.write("\n")
@@ -80,7 +80,7 @@ try:
                     print("%s %s" % ("http://" + host, "===> Admin found\n", response.status))
                 else:
                     f = open("bad.txt", 'a')
-                    f.write("301")
+                    f.write("301 : ")
                     f.write(host)
                     f.write("\n")
                     f.write("\n")
